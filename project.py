@@ -1,3 +1,20 @@
+#Ingredients
+
+BC.tell(expr('Ingredient(Chicken)'))
+BC.tell(expr('Ingredient(Rice)'))
+BC.tell(expr('Ingredient(Broccoli)'))
+BC.tell(expr('Ingredient(pepper)'))
+BC.tell(expr('Ingredient(Onion)'))
+BC.tell(expr('Ingredient(Garlic)'))
+BC.tell(expr('Ingredient(Tomato)'))
+BC.tell(expr('Ingredient(beef)'))
+BC.tell(expr('Ingredient(Pasta)'))
+BC.tell(expr('Ingredient(Cheese)'))
+
+
+#Queries
+
+
 BC.tell(expr('HaveIngredient(Chicken, Med) & HaveIngredient(Broccoli, Med) & HaveIngredient(Onion, Few) & HaveIngredient(Garlic, Few) & ( HaveTool(Pan) / HaveTool(Pot) ) ==> CanCook(Chicken_and_broccoli_stir_fry)'))
 
 
