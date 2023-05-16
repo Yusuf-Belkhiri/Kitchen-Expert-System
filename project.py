@@ -1,3 +1,5 @@
+from logic import *
+
 #Ingredients
 
 # KB.tell(expr('Ingredient(Chicken)'))
@@ -30,18 +32,24 @@
 # #Ingredients
 
 
-# # Rules
-#     # Quantities
-# KB.tell(expr('HaveIngredient(x, Much) ==> HaveIngredient(x, Med)'))
-# KB.tell(expr('HaveIngredient(x, Med) ==> HaveIngredient(x, Few)'))
+
 
 #     # Recipies
 # # KB.tell(expr('HaveIngredient(Tomato, Medium) & HaveTool(Pan) & Have(Pepper, Much) ==> CanMake(Hmiss)'))  
 
 
 
-#Queries
+global KB 
+KB = FolKB()
 
+
+# Rules
+    # Quantities
+
+KB.tell(expr('HaveIngredient(x, Much) ==> HaveIngredient(x, Med)'))
+KB.tell(expr('HaveIngredient(x, Med) ==> HaveIngredient(x, Few)'))
+
+    #Queries
 
 KB.tell(expr('HaveIngredient(Chicken, Med) & HaveIngredient(Broccoli, Med) & HaveIngredient(Onion, Few) & HaveIngredient(Garlic, Few) & ( HaveTool(Pan) / HaveTool(Pot) ) ==> CanCook(Chicken_and_broccoli_stir_fry)'))
 

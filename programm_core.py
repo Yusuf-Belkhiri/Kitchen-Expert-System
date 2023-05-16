@@ -1,10 +1,10 @@
 # INGREDIENT TREATMENT FUNCTION
 
-def checkQuanti(ingredinet, amount):
+def check_quantity(ingredient, amount):
     
     quantity = "Nothing"
     
-    if ingredinet == "Chicken" :
+    if ingredient == "Chicken" :
         if amount < 100 :
             quantity = "Few"
         elif amount < 300 :
@@ -12,7 +12,7 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
         
-    elif ingredinet == "Rice" :
+    elif ingredient == "Rice" :
         if amount < 200 :
             quantity = "Few"
         elif amount < 400 :
@@ -20,7 +20,7 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
 
-    elif ingredinet == "Broccoli" :
+    elif ingredient == "Broccoli" :
         if amount < 150 :
             quantity = "Few"
         elif amount < 300 :
@@ -28,7 +28,7 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
         
-    elif ingredinet == "Pepper" :
+    elif ingredient == "Pepper" :
         if amount < 200 :
             quantity = "Few"
         elif amount < 400 :
@@ -36,7 +36,7 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
         
-    elif ingredinet == "Onion" :
+    elif ingredient == "Onion" :
         if amount < 100 :
             quantity = "Few"
         elif amount < 300 :
@@ -44,7 +44,7 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
 
-    elif ingredinet == "Garlic" :
+    elif ingredient == "Garlic" :
         if amount < 50 :
             quantity = "Few"
         elif amount < 100 :
@@ -52,7 +52,7 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
         
-    elif ingredinet == "Tomato" :
+    elif ingredient == "Tomato" :
         if amount < 250 :
             quantity = "Few"
         elif amount < 400 :
@@ -60,7 +60,7 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
     
-    elif ingredinet == "Beef" :
+    elif ingredient == "Beef" :
         if amount < 150 :
             quantity = "Few"
         elif amount < 400 :
@@ -68,7 +68,7 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
 
-    elif ingredinet == "Pasta" :
+    elif ingredient == "Pasta" :
         if amount < 200 :
             quantity = "Few"
         elif amount < 400 :
@@ -76,7 +76,7 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
         
-    elif ingredinet == "Cheese" :
+    elif ingredient == "Cheese" :
         if amount < 150 :
             quantity = "Few"
         elif amount < 400 :
@@ -84,15 +84,18 @@ def checkQuanti(ingredinet, amount):
         else :
             quantity = "Much"
 
-    KB.tell(expr(f'HaveIngredient({ingredinet}, {quantity})')) 
+    KB.tell(expr(f'HaveIngredient({ingredient}, {quantity})')) 
 
 
 # TOOL FUNCTION :
 
-def Have_tool(tool) :
+def have_tool(tool) :
 
     KB.tell(expr(f'HaveTool({tool})'))
 
 
    
-
+def fnct():
+    available_dishes = []
+    for dish in dishes:
+        available_dishes.append(list(KB.ask_generator(expr"")))
