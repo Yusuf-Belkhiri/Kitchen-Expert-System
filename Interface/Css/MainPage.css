@@ -1,0 +1,59 @@
+:root {
+    background-image: url('/Interface/Images/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product-plain-studio-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+@font-face {
+    font-family: 'Flavors';
+    src: url('/Interface/Fonts/Flavors-Regular.ttf');
+  }
+  
+  img {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+  }
+  
+  #Title {
+    position: absolute;
+    top: 0;
+    right: 80px; /* Adjust the value as needed */
+    font-family: Flavors;
+    font-size: 50px;
+    letter-spacing: 10px;
+    transform: rotate(5deg) translateX(-50px);
+    perspective: 1000px;
+    perspective-origin: top center;
+  }
+  
+  .circle1 {
+    position: absolute;
+    right: 450px;
+    top: 200px;
+    background-image: url('/Interface/Images/0.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .circle2 {
+    top: 350px;
+    right: 220px;
+    position: absolute;
+    background-image: url('/Interface/Images/1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  
