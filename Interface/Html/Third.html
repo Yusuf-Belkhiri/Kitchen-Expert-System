@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Interface/Css/Third.css">
+    <title>Can I Cook </title>
+</head>
+<body>
+    <img src="/Interface/Images/p2.png" alt="Ingredient Image">
+    <h1 id="sentence">Let us Help You Know whether you can prepare this dish Or not ! </h1>
+     
+     <form id="selectDish">
+    
+    <select id="dishSelect" onchange="handleDishSelect()">
+      <option value="">Select a Dish</option>
+      <option value="Chicken_and_broccoli_stir_fry">Chicken and Broccoli Stir Fry</option>
+      <option value="Beef_and_broccoli_stir_fry">Beef and Broccoli Stir Fry</option>
+      <option value="Cheesy_broccoli_and_rice_casserole">Cheesy Broccoli and Rice Casserole</option>
+      <option value="Chicken_and_rice_casserole">Chicken and Rice Casserole</option>
+      <option value="Stuffed_Peppers">Stuffed Peppers</option>
+      <option value="Chicken_and_vegetable_soup">Chicken and Vegetable Soup</option>
+      <option value="Beef_and_vegetable_soup">Beef and Vegetable Soup</option>
+      <option value="Cheesy_pasta_bake">Cheesy Pasta Bake</option>
+      <option value="Beef_and_onion_stir_fry">Beef and Onion Stir Fry</option>
+      <option value="Cheesy_Chicken_pasta">Cheesy Chicken Pasta</option>
+      <option value="Chicken_fajitas">Chicken Fajitas</option>
+      <option value="Beef_tacos">Beef Tacos</option>
+      <option value="Cheesy_tomato_and_rice_casserole">Cheesy Tomato and Rice Casserole</option>
+      <option value="Broccoli_and_cheese_soup">Broccoli and Cheese Soup</option>
+      <option value="Chicken_alfredo_pasta">Chicken Alfredo Pasta</option>
+      <option value="Beef_and_broccoli_casserole">Beef and Broccoli Casserole</option>
+      <option value="Cheesy_garlic_bread">Cheesy Garlic Bread</option>
+      <option value="Tomato_and_cheese_omelet">Tomato and Cheese Omelet</option>
+      <option value="Beef_and_cheese_quesadillas">Beef and Cheese Quesadillas</option>
+      <option value="Chicken_and_cheese_quesadillas">Chicken and Cheese Quesadillas</option>
+    </select>
+  </form>
+  
+  <div id="messageContainer"></div>
+  <button type="submit" onclick="navigateToSecondPage()" id="resultButton">Continue</button>
+
+  <script>
+    function handleDishSelect() {
+      const dishSelect = document.getElementById('dishSelect');
+      const messageContainer = document.getElementById('messageContainer');
+      
+      // Clear previous message
+      messageContainer.innerHTML = '';
+      
+      if (dishSelect.value !== '') {
+        const message = document.createElement('p');
+        message.textContent = `Now let us know what you have as ingredients/tools for ${dishSelect.value}`;
+        messageContainer.appendChild(message);
+      }
+    
+    }
+    
+    function navigateToSecondPage() {
+      // Redirect to the second page
+      window.location.href = "Second.html";      
+      
+    }
+  </script>
+    
+</body>
+</html>
