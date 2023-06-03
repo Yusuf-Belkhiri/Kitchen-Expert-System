@@ -136,22 +136,40 @@
       const selectedTools = Array.from(document.querySelectorAll('input[name="tools[]"]:checked'))
         .map(checkbox => checkbox.value);
 
-      // Perform validation
-      if (selectedIngredients.length === 0) {
-        alert('Please choose at least one ingredient.');
-      } else if (selectedIngredients.length !== quantities.length) {
-        alert('Please provide a quantity for each selected ingredient.');
-      } else if (selectedTools.length === 0) {
-        alert('Please choose at least one tool.');
-      } else {
-        // Output the selected ingredients, quantities, and tools
-        console.log('Selected Ingredients:', selectedIngredients);
-        console.log('Quantities:', quantities);
-        console.log('Selected Tools:', selectedTools);
-        
-        // You can perform further actions here, such as making an API request or updating the UI.
-      }
+     
+// Perform validation
+let isValid = true;
+
+if (selectedIngredients.length === 0) {
+  isValid = false;
+  alert('Please choose at least one ingredient.');
+} else {
+  // Check if a quantity is provided for each selected ingredient
+  selectedIngredients.forEach((ingredient) => {
+    const ingredientIndex = selectedIngredients.indexOf(ingredient);
+    const quantity = quantities[ingredientIndex].trim();
+    if (quantity === '') {
+      isValid = false;
+      alert(`Please provide a quantity for ${ingredient}.`);
     }
+  });
+}
+
+if (selectedTools.length === 0) {
+  isValid = false;
+  alert('Please choose at least one tool.');
+}
+
+if (isValid) {
+  // Output the selected ingredients, quantities, and tools
+  console.log('Selected Ingredients:', selectedIngredients);
+  console.log('Quantities:', quantities);
+  console.log('Selected Tools:', selectedTools);
+
+  // You can perform further actions here, such as making an API request or updating the UI.
+}
+}
+
   </script>
 </body>
 </html>
