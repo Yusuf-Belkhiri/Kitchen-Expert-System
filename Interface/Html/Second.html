@@ -7,7 +7,7 @@
 <body>
   <img src="/Interface/Images/p1.png" alt="Ingredient Image">
   <h1 id="sentence">Let us help you decide what delicious dish to prepare today</h1>
-  <form>
+  <form id="ingredientForm">
     <h1 class="title">Ingredients</h1>
     <div class="container">
       <div>
@@ -113,6 +113,45 @@
       <input type="submit" value="Result" id="submit">
     </div>
   </form>
- 
+  <script>
+    // Get form element
+    const form = document.getElementById('ingredientForm');
+
+    // Add event listener for form submission
+    form.addEventListener('submit', handleSubmit);
+
+    // Handle form submission
+    function handleSubmit(e) {
+      e.preventDefault();
+
+      // Get selected ingredients
+      const selectedIngredients = Array.from(document.querySelectorAll('input[name="ingredients[]"]:checked'))
+        .map(checkbox => checkbox.value);
+
+      // Get ingredient quantities
+      const quantities = Array.from(document.querySelectorAll('input[name="quantities[]"]'))
+        .map(input => input.value);
+
+      // Get selected tools
+      const selectedTools = Array.from(document.querySelectorAll('input[name="tools[]"]:checked'))
+        .map(checkbox => checkbox.value);
+
+      // Perform validation
+      if (selectedIngredients.length === 0) {
+        alert('Please choose at least one ingredient.');
+      } else if (selectedIngredients.length !== quantities.length) {
+        alert('Please provide a quantity for each selected ingredient.');
+      } else if (selectedTools.length === 0) {
+        alert('Please choose at least one tool.');
+      } else {
+        // Output the selected ingredients, quantities, and tools
+        console.log('Selected Ingredients:', selectedIngredients);
+        console.log('Quantities:', quantities);
+        console.log('Selected Tools:', selectedTools);
+        
+        // You can perform further actions here, such as making an API request or updating the UI.
+      }
+    }
+  </script>
 </body>
 </html>
