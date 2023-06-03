@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ingredient Form</title>
+  <link rel="stylesheet" type="text/css" href="/Interface/Css/Second.css">
+</head>
+<body>
+  <img src="/Interface/Images/p1.png" alt="Ingredient Image">
+  <h1 id="sentence">Let us help you decide what delicious dish to prepare today</h1>
+  <form>
+    <h1 class="title">Ingredients</h1>
+    <div class="container">
+      <div>
+        <div class="column">
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Chicken">
+            Chicken
+            <input class="quantity" type="number" name="quantities[]" placeholder="(pieces)" min="1">
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Rice">
+            Rice
+            <input class="quantity" type="number" name="quantities[]" placeholder="(kg)" min="1">
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Broccoli">
+            Broccoli
+            <input class="quantity" type="number" name="quantities[]" placeholder="(pieces)" min="1">
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Pepper">
+            Pepper
+            <input class="quantity" type="number" name="quantities[]" placeholder="(grams)" min="1">
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Onion">
+            Onion
+            <input class="quantity" type="number" name="quantities[]" placeholder="(pieces)" min="1">
+          </label>
+        </div>
+      </div>
+      <div>
+        <div class="column">
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Garlic">
+            Garlic
+            <input class="quantity" type="number" name="quantities[]" placeholder="(pieces)" min="1">
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Tomato">
+            Tomato
+            <input class="quantity" type="number" name="quantities[]" placeholder="(pieces)" min="1">
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Beef">
+            Beef
+            <input class="quantity" type="number" name="quantities[]" placeholder="(grams)" min="1">
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Pasta">
+            Pasta
+            <input class="quantity" type="number" name="quantities[]" placeholder="(grams)" min="1">
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="ingredients[]" value="Cheese">
+            Cheese
+            <input class="quantity" type="number" name="quantities[]" placeholder="(grams)" min="1">
+          </label>
+        </div>
+      </div>
+    </div>
+    <h1 class="title">Available Tools</h1>
+    <div class="container container1">
+      <div>
+        <label>
+          <input type="checkbox" name="tools[]" value="Pan" class="box">
+          Pan
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="tools[]" value="Pot" class="box">
+          Pot
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="tools[]" value="Grater" class="box">
+          Grater
+        </label>
+        <br>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" name="tools[]" value="CuttingBoard" class="box">
+          Cutting Board
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="tools[]" value="Mixer">
+          Mixer
+        </label>
+        <br>
+      </div>
+    </div>
+    <div id="result">
+      <input type="submit" value="Result" id="submit">
+    </div>
+  </form>
+ 
+</body>
+</html>

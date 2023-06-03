@@ -1,0 +1,113 @@
+:root {
+    background-image: url('/Interface/Images/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product-plain-studio-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+@font-face {
+    font-family: 'Bubbles';
+    src: url('/Interface/Fonts/FuzzyBubbles-Regular.ttf') ;
+  }
+  @font-face {
+    font-family: 'Flavors';
+    src: url('/Interface/Fonts/Flavors-Regular.ttf') ;
+  }
+  *{
+    font-family: Bubbles;
+    font-weight: bold;
+  }
+img{
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    top :15%;
+}
+#sentence{
+    position: absolute;
+  
+    left :15%;
+    right: 10%;
+    font-family: Bubbles;
+    
+}
+form{
+    position: absolute;
+    right: 20%;
+    top: 15%;
+}
+
+.error {
+    color: red;
+  }
+
+  .container {    
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .column {
+    flex-basis: 50%;
+  }
+  
+  .column label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .column label input[type="number"] {
+    margin-left: 30px;
+  }
+  
+  input[type="submit"] {
+    margin-top: 10px;
+  }
+
+  .container1{
+    margin-top: 10px;
+  }
+  .quantity{
+    width: 80px;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.5); /* Adjust the scale value as needed */
+    margin-right:10px; 
+    
+  }
+  .title{
+    font-family: Flavors;
+    letter-spacing: 5px;
+    margin-top: 25px;
+  }
+
+  .box{
+    margin-bottom: 20px;
+  }
+
+  #result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px; /* Adjust the height as needed */
+  }
+
+  #submit{
+    height: 50px;
+    width: 100px;
+    font-family:Bubbles ;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 15px;
+    border-color: purple;
+    background-color: rgb(255, 217, 224);
+    cursor: pointer;
+  }
+  #result input[type="submit"]:hover {
+    background-color: purple; 
+    border-color: antiquewhite;
+    color: white;
+    
+  }
