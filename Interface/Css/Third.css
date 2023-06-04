@@ -1,5 +1,5 @@
 :root {
-  background-image: url('/Interface/Images/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product-plain-studio-background.jpg');
+  background-image: url('../Images/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product-plain-studio-background.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -7,11 +7,11 @@
 
 @font-face {
     font-family: 'Bubbles';
-    src: url('/Interface/Fonts/FuzzyBubbles-Regular.ttf') ;
+    src: url('../Fonts/FuzzyBubbles-Regular.ttf') ;
   }
   @font-face {
     font-family: 'Flavors';
-    src: url('/Interface/Fonts/Flavors-Regular.ttf') ;
+    src: url('../Fonts/Flavors-Regular.ttf') ;
   }
   *{
     font-family: Bubbles;
