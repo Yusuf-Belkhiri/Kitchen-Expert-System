@@ -8,29 +8,31 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container" id="container1" {% if displayFirstDiv %}style="display: block;"{% else %}style="display: none;"{% endif %}>
+    <div class="container" id="container1">
         <img src="/Interface/Images/Yes.png" alt="" class="image">
         <h1 id="sentence" class="text">Absolutely! You can whip up this delightful dish!</h1>
       </div>
       
-      <div class="container" id="container2" {% if !displayFirstDiv %}style="display: block;"{% else %}style="display: none;"{% endif %}>
+      <div class="container" id="container2">
         <img src="/Interface/Images/No.png" alt="" class="image" id="no">
         <h1 id="sentence" class="text">I'm sorry to tell you that you're unable to prepare this dish. Hopefully, you'll have the opportunity to try it another time!</h1>
       </div>
       
       <script>
         // JavaScript code
-        var displayFirstDiv = true;
+        var disableFirstDiv = false;
+        var disableSecondDiv = true;
       
-        if (!displayFirstDiv) {
+        if (disableFirstDiv) {
           var container1 = document.getElementById("container1");
-          container1.style.display = "none";
+          container1.remove();
+        }
       
+        if (disableSecondDiv) {
           var container2 = document.getElementById("container2");
-          container2.style.display = "block";
+          container2.remove();
         }
       </script>
-      
       
       
       
