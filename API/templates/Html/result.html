@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/MainPage.css">
+    <link rel="stylesheet" href="/static/Css/MainPage.css">
     <title>Document</title>
 </head>
-<body>
+<body >
     <div class="first-page">
-        <img src="../Images/food.png" alt="Food">
+        <img src="/static/Images/food.png" alt="Food">
         <div id="Title">
           <h1>Tasty Bites</h1>
         </div>
-        <a href="./Second.html">
+        <a href="./Third.html">
           <button class="circle1"></button>
         </a>
 
-        <a href="./Third.html">
+        <a href="./Second.html">
           <button class="circle2"></button>
         </a>
+        {%if result %}
+    <div class="results">
+    {% for item in result %}
+    <h1>{{item}}</h1>
+    {% endfor %}
     </div>
-       
+       {%endif%}
+    </div>
+    
 </body>
 </html>

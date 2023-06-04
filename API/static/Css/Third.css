@@ -1,0 +1,86 @@
+:root {
+    background-image: url('../Images/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product-plain-studio-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+@font-face {
+    font-family: 'Bubbles';
+    src: url('../Fonts/FuzzyBubbles-Regular.ttf') ;
+  }
+  @font-face {
+    font-family: 'Flavors';
+    src: url('../Fonts/Flavors-Regular.ttf') ;
+  }
+  *{
+    font-family: Bubbles;
+    font-weight: bold;
+  }
+img{
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    top :15%;
+    right: 3%;
+}
+#sentence{
+    position: absolute;  
+    top: 5%;
+    left :8%;
+    right: 25%;
+    font-family: Bubbles;
+    
+}
+
+#selectDish {
+    margin-top: 50px;
+    position: absolute;
+    top : 25%;
+    right : 30%;
+    left: 8%;
+}
+
+select {
+    border-radius: 5px;
+    border-color: purple;
+    height: 50px;
+    width: 500px;
+    font-size: 20px;
+    padding-left: 15px;
+   
+}
+select option[value=""] {
+    color: #00000085; /* Set the color for the placeholder text */
+  }
+
+#messageContainer{
+    
+    position: absolute;
+    top : 50%;
+    right : 20%;
+    left: 8%;
+}  
+
+#resultButton {
+    position: absolute;
+    top: 80%;
+    right: 50%;
+    transform: translateX(50%);
+    height: 50px;
+    width: 100px;
+    font-family: Bubbles;
+    font-weight: bolder;
+    font-size: 15px;
+    border-radius: 15px;
+    border-color: purple;
+    background-color: rgb(255, 217, 224);
+    cursor: pointer;
+  }
+  
+  #resultButton:hover {
+    background-color: purple;
+    border-color: antiquewhite;
+    color: white;
+  }
+  
