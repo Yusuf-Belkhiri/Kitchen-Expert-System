@@ -156,6 +156,27 @@
         console.log('Selected Tools:', selectedTools);
       }
     }
+     // Get the referring page URL
+  var referringPage = document.referrer;
+
+// Get the "Result" button element
+var resultButton = document.getElementById('submit');
+
+// Check the referring page and set the appropriate destination for the button
+if (referringPage.includes('MainPage.html')) {
+  resultButton.addEventListener('click', function() {
+    // Redirect to Result1 page
+    window.location.href = 'Result1.html';
+  });
+} else if (referringPage.includes('Third.html')) {
+  resultButton.addEventListener('click', function() {
+    // Redirect to Result2 page
+    window.location.href = 'result2.html';
+  });
+} else {
+  // Handle the case when the referring page is unknown or not one of the specified pages
+  console.log('Unknown referring page');
+}
   </script>
 </body>
 </html>
