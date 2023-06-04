@@ -129,48 +129,33 @@
         .map(checkbox => checkbox.value);
 
       // Get ingredient quantities
-      const quantities = Array.from(document.querySelectorAll('input[name="Quantity"]'))
-        .map(input => input.value);
+      const quantities = Array.from(document.querySelectorAll('.quantity'))
+        .map(input => input.value.trim());
 
       // Get selected tools
       const selectedTools = Array.from(document.querySelectorAll('input[name="tools[]"]:checked'))
         .map(checkbox => checkbox.value);
 
-     
-// Perform validation
-let isValid = true;
+      // Perform validation
+      let isValid = true;
 
-if (selectedIngredients.length === 0) {
-  isValid = false;
-  alert('Please choose at least one ingredient.');
-} else {
-  // Check if a quantity is provided for each selected ingredient
-  selectedIngredients.forEach((ingredient) => {
-    const ingredientIndex = selectedIngredients.indexOf(ingredient);
-    const quantity = quantities[ingredientIndex].trim();
-    if (quantity === '') {
-      isValid = false;
-      alert(`Please provide a quantity for ${ingredient}.`);
+      if (selectedIngredients.length === 0) {
+        isValid = false;
+        alert('Please choose at least one ingredient.');
+      }
+
+      if (selectedTools.length === 0) {
+        isValid = false;
+        alert('Please choose at least one tool.');
+      }
+
+      if (isValid) {
+        // Output the selected ingredients, quantities, and tools
+        console.log('Selected Ingredients:', selectedIngredients);
+        console.log('Quantities:', quantities);
+        console.log('Selected Tools:', selectedTools);
+      }
     }
-  });
-}
-
-if (selectedTools.length === 0) {
-  isValid = false;
-  alert('Please choose at least one tool.');
-}
-
-if (isValid) {
-  // Output the selected ingredients, quantities, and tools
-  console.log('Selected Ingredients:', selectedIngredients);
-  console.log('Quantities:', quantities);
-  console.log('Selected Tools:', selectedTools);
-
-  // You can perform further actions here, such as making an API request or updating the UI.
-}
-}
-    
-
   </script>
 </body>
 </html>
