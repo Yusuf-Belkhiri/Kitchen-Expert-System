@@ -57,10 +57,3 @@
     cursor: pointer;
   }
   
-  .results {
-    color:white;
-    border : solid white 24px;
-    padding-left: 14rem;
-    z-index: 999;
-
-  }
