@@ -1,0 +1,40 @@
+:root {
+    background-image: url('/Interface/Images/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product-plain-studio-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+@font-face {
+    font-family: 'Bubbles';
+    src: url('/Interface/Fonts/FuzzyBubbles-Regular.ttf') ;
+  }
+
+
+  
+  *{
+    font-family: Bubbles;
+    font-weight: bold;
+  }
+  .container {
+    display: flex;
+    align-items: center;  
+
+   
+  }
+  
+  .image {
+    width :400px;
+    height: 600px;
+    margin-left: 50px;
+  }
+  
+  .text {
+    margin-left: 15px; /* Adjust the margin as needed */
+  }
+
+  #no{
+    height: auto;
+    width: auto;
+  }
+  
