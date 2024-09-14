@@ -6,7 +6,7 @@
   }
 @font-face {
     font-family: 'Flavors';
-    src: url('/Interface/Fonts/Flavors-Regular.ttf');
+    src: url('../Fonts/Flavors-Regular.ttf');
   }
   
   img {
@@ -31,7 +31,7 @@
     position: absolute;
     right: 450px;
     top: 200px;
-    background-image: url('/Interface/Images/0.png');
+    background-image: url('../Images/0.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@
     top: 350px;
     right: 220px;
     position: absolute;
-    background-image: url('/Interface/Images/1.png');
+    background-image: url('../Images/1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
