@@ -1,2 +1,3 @@
-# Kitchen-Expert-System
-Expert system of food ingredients / recipies using python-aima package, First Order Logic
+# AI-Chef: Kitchen-Expert-System
+AI-based Kitchen Expert System for Dish Decision-making utilizing ingredients, cooking tools, and recipes (First Order Logic) \
+Link: https://yusuf-belkhiri.github.io/Kitchen-Expert-System/
