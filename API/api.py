@@ -14,7 +14,7 @@ def MainPage():
     result = session['result']
     #result = ['asd','asd']
     print('sadsadsadsad')
-    return render_template('/Html/MainPage.html',result=result)
+    return render_template('/Html/index.html',result=result)
 
 
 
